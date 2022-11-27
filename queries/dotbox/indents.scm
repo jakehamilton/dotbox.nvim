@@ -1,0 +1,9 @@
+[
+  (set)
+  (list)
+] @indent
+
+[
+  "}"
+  "]"
+] @branch
