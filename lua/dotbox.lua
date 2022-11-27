@@ -25,21 +25,10 @@ function M.init()
       enable = true,
       module_path = "dotbox.internal",
       is_supported = function(lang)
-        _G.ntsdb = "is_supported lang=" .. lang
-        return lang == "dotbox"
+        return queries.get_query(lang, "highlights") ~= nil
       end,
     }
   }
-
-  vim.api.nvim_create_autocmd(
-    { "BufRead", "BufNewFile" },
-    {
-      pattern = { "*.box" },
-      callback = function()
-        vim.bo.filetype = "dotbox"
-      end
-    }
-  )
 end
 
 return M
