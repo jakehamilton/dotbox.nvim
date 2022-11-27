@@ -1,11 +1,13 @@
+local highlight = require("nvim-treesitter.highlight")
+
 local M = {}
 
 function M.attach(bufnr, lang)
-  -- TODO: Fill this with what you need to do when attaching to a buffer
+  highlight.attach(bufnr, lang)
 end
 
 function M.detach(bufnr)
-  -- TODO: Fill this with what you need to do when detaching from a buffer
+  highlight.detach(bufnr)
 end
 
 return M

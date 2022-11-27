@@ -4,12 +4,18 @@
 (false) @boolean
 (number) @number
 
-(pair key: (identifier) @label)
-(pair key: (string) @label)
+(pair key: (identifier) @variable)
+(pair key: (string) @string)
 
-(string) @string
+(pair value: (string) @string)
+
+(list (string) @string)
+
 (string_content (escape_sequence) @string.escape)
 (string_content) @spell
+
+(set (pair key: (identifier) @none))
+(set (pair key: (string) @string))
 
 "{" @punctuation.bracket
 "}" @punctuation.bracket

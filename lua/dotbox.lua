@@ -1,6 +1,7 @@
 local nvim_treesitter = require("nvim-treesitter")
+local highlight = require("nvim-treesitter.highlight")
 local parsers = require("nvim-treesitter.parsers")
-local queries = require("nvim-treesitter.query")
+-- local queries = require("nvim-treesitter.query")
 
 local M = {}
 
@@ -26,7 +27,6 @@ function M.init()
       module_path = "dotbox.internal",
       is_supported = function(lang)
         return lang == "dotbox"
-        -- return queries.get_query(lang, "highlights") ~= nil
       end,
     }
   }
