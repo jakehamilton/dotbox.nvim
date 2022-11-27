@@ -8,7 +8,7 @@ function M.init()
   local ft_to_parser = parsers.filetype_to_parsername
   local parser_config = parsers.get_parser_configs()
 
-  ft_to_parser.dotbox = "dotbox"
+  -- ft_to_parser.dotbox = "dotbox"
 
   parser_config.dotbox = {
     install_info = {
@@ -25,7 +25,8 @@ function M.init()
       enable = true,
       module_path = "dotbox.internal",
       is_supported = function(lang)
-        return queries.get_query(lang, "highlights") ~= nil
+        return lang == "dotbox"
+        -- return queries.get_query(lang, "highlights") ~= nil
       end,
     }
   }
