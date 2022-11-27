@@ -1,14 +1,21 @@
-# module-template
+# dotbox.nvim
 
-A repository template to create you own nvim-treesitter module !
+Neovim support for [DotBox](https://dotbox.dev).
 
-Please find below the list of things you will need to do to get going !
+![Example Screenshot](./assets/screenshot.png)
 
-# TODO (for you)
+## Features
 
-After using this template, you will need to :
+- ✓ Highlights
+- ✓ Folds
+- ✓ Indents
+- ✓ Locals
+- ✖ Insertions
 
-- [x] Rename every from `example-module` to the actual name of your module
-- [x] Maybe rename the queries.
-- [ ] Send us a message here : [![Gitter](https://badges.gitter.im/nvim-treesitter/community.svg)](https://gitter.im/nvim-treesitter/community?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)
-- [ ] Code your module !
+## Usage
+
+This plugin should work with any plugin manager and does not require any setup. The
+only requirement is that you have tree-sitter installed and configured. If you don't
+build tree-sitter with support for the
+[DotBox Tree-sitter grammar](https://github.com/jakehamilton/tree-sitter-dotbox)
+then you will need to run `:TSInstall` to ensure that all parsers needed are available.
